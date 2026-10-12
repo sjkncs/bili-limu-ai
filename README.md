@@ -1,36 +1,38 @@
-# 跟李沐学AI · 视频索引（B 站）
+# bili-limu-ai - moved into the master index
 
-> Snapshot: **2026-10-11** - **106** episodes, one directory per content type.
+> This repository's content is now part of the **master index**:
+> **[bili-ai-index](https://github.com/sjkncs/bili-ai-index)** - B 站 AI 学习资源总索引（按内容类型分目录）
+>
+> Snapshot: **2026-10-12** - 106 episodes indexed here.
 
-- **跟李沐学AI**
+> 本仓库保留独立的三目录结构，未并入总索引，以免与其自身分目录重复
 
-## Contents
+## What this repo covered
 
-| directory | type | source | episodes | full title | arXiv | speaker |
-|---|---|---|---:|---:|---:|---:|
-| [`01-paper-reading/`](01-paper-reading/) | AI 论文精读 | 跟李沐学AI | 60 | 0 | 0 | 0 |
-| [`02-hands-on-ai/`](02-hands-on-ai/) | 动手用AI | 跟李沐学AI | 17 | 0 | 1 | 0 |
-| [`03-ml-course/`](03-ml-course/) | 斯坦福实用机器学习 | 跟李沐学AI | 29 | 0 | 0 | 0 |
-| | | **total** | **106** | | | |
+跟李沐学AI：AI 论文精读 60 / 动手用AI 17 / 斯坦福实用机器学习 29
+
+## Where to find it now
+
+| master folder | content |
+|---|---|
+| [`01-paper-reading/`](https://github.com/sjkncs/bili-ai-index/tree/main/01-paper-reading) | AI 论文精读 |
+
+## Data still in this repository
+
+The machine-readable files are unchanged, so existing links keep working:
+
+- `items.json（各目录）`
 
 ## Data source / method / limits
 
-**Data source**: `seasons_archives_list` for episode lists; `x/web-interface/view`
-per video for the **`desc`** field. Every request goes through a backoff wrapper because
-the anonymous API answers risk-control code `-352` under load.
+**Data source**: collected from the Bilibili anonymous API (`seasons_archives_list` for
+episode lists, `x/web-interface/view` for the `desc` field).
 
-**Method**: directory assignment uses an **explicit map of exact collection names** -- a
-fuzzy match silently dropped one whole conference series once (48 instead of 96 items).
-Parsing then depends on the source's description shape (paper template / guest-intro block /
-title-only).
+**Method**: this repository is no longer rebuilt by the tool; the master index is. The
+files here are a frozen snapshot kept for stable links.
 
-**Limits**
-- Metadata index only: no videos, no subtitles, no slides.
-- Bilibili caps video **titles** at 80 chars. Where a source writes full paper names in the
-  description, `full_title` is complete while `bvid_title` may be truncated.
-- Sources without a description template expose fewer fields; those stay empty and are
-  **not guessed**.
-- Data was collected with backoff and is a snapshot, not a live view.
+**Limits**: for current data use the master index above. This page is a pointer, not an
+index -- it lists no episodes.
 
 ---
-*2026-10-11 snapshot. All content belongs to the original authors.*
+*2026-10-12. All content belongs to the original authors.*
